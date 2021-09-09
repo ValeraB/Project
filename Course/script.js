@@ -10,12 +10,29 @@ const personalMovieDB = {
     privat: false
 };
 
-const a = prompt('what is your last watched movie ?', '' ),
-      b = prompt('how would you rate the movie ?', '' ),
-      c = prompt('what is your last watched movie ?', '' ),
-      d = prompt('how would you rate the movie ?', '' );
-      
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+
+for(let i = 0 ; i < 2; i++){
+    let  a = prompt('what is your last watched movie ?', '' ),
+          b = prompt('how would you rate the movie ?', '' );
+     
+          while (a === null && a === "") {
+            a = prompt('what is your last watched movie ?', '' );
+          }
+          
+          while (b === null && b === "") {
+            b = prompt('how would you rate the movie ?', '' );
+          }
+            console.log(a);
+                  
+   personalMovieDB.movies[a] = b;
+  }
+  
+  
+
+
 
 console.log(personalMovieDB);
+
+
+
+
